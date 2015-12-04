@@ -1,13 +1,12 @@
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
  * ega-qwizard-mapper
- * <p>
+ *
  * Description:
- * <- content ->
+ *
  *
  * @author fillinger
  * @version Date: 12/4/15

@@ -4,9 +4,9 @@ import java.util.stream.Stream;
 
 /**
  * ega-qwizard-mapper
- * <p>
+ *
  * Description:
- * <- content ->
+ *
  *
  * @author fillinger
  * @version Date: 12/4/15
@@ -30,12 +30,12 @@ public class EgaMapper implements Mapper {
     private Stream<String> sampleAnalysisFile;
 
     /**
-     * HashMap that will map ICGC Sample ID -> EGAN-id
+     * HashMap that will map ICGC Sample ID: EGAN-id
      */
     private HashMap<String, String> metaInfoMap = new HashMap<>();
 
     /**
-     * HashMap that will map EGAN-id -> raw data file name
+     * HashMap that will map EGAN-id: raw data file name
      */
     private HashMap<String, String> analyisFileMap = new HashMap<>();
 
@@ -43,8 +43,8 @@ public class EgaMapper implements Mapper {
      * EgaMapper constructor, must have two files, containing
      * the information from 'Sample_metainfo.map'
      * and 'Study_Sample_Analysis_file.map'
-     * @param sampleMetaInfo -> Sample_metainfo.map
-     * @param sampleAnalysisFile -> Study_Sample_Analysis_file.map
+     * @param sampleMetaInfo Sample_metainfo.map
+     * @param sampleAnalysisFile Study_Sample_Analysis_file.map
      */
     protected EgaMapper(Stream sampleMetaInfo, Stream sampleAnalysisFile){
         this.sampleMetaInfo = sampleMetaInfo;
