@@ -5,8 +5,10 @@
  *
  *
  * @author fillinger
- * @version Date: 12/4/15
- *          EMail: sven.fillinger@student.uni-tuebingen.de
+ * @version 1.0
+ * Date: 12/4/15
+ * E-Mail: sven.fillinger@student.uni-tuebingen.de
+ * E-Mail: sven.fillinger@student.uni-tuebingen.de
  */
 public interface Mapper {
 

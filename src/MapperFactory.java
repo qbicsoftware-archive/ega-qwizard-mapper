@@ -1,4 +1,3 @@
-import java.io.File;
 import java.util.stream.Stream;
 
 /**
@@ -8,8 +7,9 @@ import java.util.stream.Stream;
  *
  *
  * @author fillinger
- * @version Date: 12/4/15
- *          EMail: sven.fillinger@student.uni-tuebingen.de
+ * @version 1.0
+ * Date: 12/4/15
+ * E-Mail: sven.fillinger@student.uni-tuebingen.de
  */
 public class MapperFactory {
 
