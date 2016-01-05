@@ -48,7 +48,7 @@ public class BarcodeExtractor {
 
     /**
      * Request the calculated analyzedId:barcode map
-     * @return
+     * @return Map String analyzedId : String barcode
      */
     public Map<String, String> getanalyzedIdMap() {
         if (this.analyzedIdMap == null){

@@ -20,7 +20,7 @@ public class MapperFactory {
      * @param sampleAnalysisFile Study_Sample_Analysis_file.map
      * @return An object of type Mapper
      */
-    public static Mapper getMapper(Stream sampleMetaInfo, Stream sampleAnalysisFile){
+    public static Mapper getMapper(Stream<String> sampleMetaInfo, Stream<String> sampleAnalysisFile){
         return new EgaMapper(sampleMetaInfo, sampleAnalysisFile);
     }
 

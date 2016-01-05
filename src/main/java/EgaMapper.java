@@ -47,7 +47,7 @@ public class EgaMapper implements Mapper {
      * @param sampleMetaInfo Sample_metainfo.map
      * @param sampleAnalysisFile Study_Sample_Analysis_file.map
      */
-    protected EgaMapper(Stream sampleMetaInfo, Stream sampleAnalysisFile){
+    protected EgaMapper(Stream<String> sampleMetaInfo, Stream<String> sampleAnalysisFile){
         this.sampleMetaInfo = sampleMetaInfo;
         this.sampleAnalysisFile = sampleAnalysisFile;
         createAnalysisFileMap();
