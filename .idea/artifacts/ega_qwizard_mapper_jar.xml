@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ega-qwizard-mapper:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ega_qwizard_mapper_jar</output-path>
+    <root id="archive" name="ega-qwizard-mapper.jar">
+      <element id="module-output" name="ega-qwizard-mapper" />
+    </root>
+  </artifact>
+</component>
