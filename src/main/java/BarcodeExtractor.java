@@ -15,6 +15,11 @@ import java.util.Map;
  */
 public class BarcodeExtractor {
 
+
+    private final int BARCODE_POSITION = 0;
+
+    private final int SECONDARY_NAME_POSITION = 1;
+
     /**
      * The search string, filteres lines of type Q_NGS_SINGLE_SAMPLE_RUN
      */
@@ -69,8 +74,8 @@ public class BarcodeExtractor {
             while ((line = bufferedReader.readLine()) != null){
                 if (line.contains(SAMPLE_TYPE)){
                     String[] lineContent = line.split("\t");
-                    String barcode = lineContent[0];
-                    String analyzedId = lineContent[4];
+                    String barcode = lineContent[BARCODE_POSITION];
+                    String analyzedId = lineContent[SECONDARY_NAME_POSITION];
                     this.analyzedIdMap.put(analyzedId, barcode);
                 }
             }
