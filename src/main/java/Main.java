@@ -12,7 +12,8 @@ import java.util.Map;
  *
  *
  * @author fillinger
- * @version Date: 12/4/15
+ * @version Version: 1.2
+ *          Date: 01/15/16
  *          EMail: sven.fillinger@student.uni-tuebingen.de
  */
 public class Main {
@@ -70,16 +71,11 @@ public class Main {
             System.exit(1);
         }
 
-        if(args.length != 4) {
-            System.err.println("Missing arguments.");
-            System.exit(1);
-        }
     }
 
 
     private static void run(String sampleMetaInfo, String sampleAnalysisFile,
                      String qWizardFile, String rawDataDirectory) throws MapperInitException{
-
         try {
             Mapper egaMapper = MapperFactory.getMapper(Files.lines(Paths.get(sampleMetaInfo)),
                     Files.lines(Paths.get(sampleAnalysisFile)));
@@ -87,11 +83,15 @@ public class Main {
 
             Map<String, String> analyzedIdMap = barcodeExtractor.make(qWizardFile).getanalyzedIdMap();
 
+            System.err.println(analyzedIdMap.keySet().size());
+
             for (String analyzedID : analyzedIdMap.keySet()){
 
                 String rawDataName = egaMapper.getRawDataFile(analyzedID);
 
                 Path filePath = Paths.get(rawDataDirectory + File.separator + rawDataName);
+
+                System.out.println(filePath);
 
                 Path newFilePath = Paths.get(rawDataDirectory + File.separator +
                         analyzedIdMap.get(analyzedID) + "_" + rawDataName);
@@ -105,6 +105,8 @@ public class Main {
             }
         } catch (IOException e){
             throw new MapperInitException("Could not retrieve EGA Mapper object", e);
+        } catch (Exception e){
+            System.err.println(e.getCause());
         }
 
 

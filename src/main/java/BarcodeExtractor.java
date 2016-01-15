@@ -72,12 +72,15 @@ public class BarcodeExtractor {
 
             String line;
             while ((line = bufferedReader.readLine()) != null){
-                if (line.contains(SAMPLE_TYPE)){
+                if (line.contains("Q")){
                     String[] lineContent = line.split("\t");
                     String barcode = lineContent[BARCODE_POSITION];
                     String analyzedId = lineContent[SECONDARY_NAME_POSITION];
                     this.analyzedIdMap.put(analyzedId, barcode);
                 }
+            }
+            if (analyzedIdMap.size() == 0){
+                System.err.println("Something went wrong creating the barcode map. Size is 0?");
             }
             bufferedReader.close();
         } catch (IOException e){
